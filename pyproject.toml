@@ -1,0 +1,23 @@
+[project]
+name = "minimalist-python-cli"
+version = "0.1.0"
+description = "Minimalist Python CLI with click and uv"
+authors = [
+    { name = "Nicolas Trossat", email = "nicolas@trossat.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.7",
+]
+
+[project.scripts]
+hello-world = "src.main:hello_world"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["src"]
